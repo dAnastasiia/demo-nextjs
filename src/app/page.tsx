@@ -1,12 +1,13 @@
-import ActiveLabel from './components/active-label/active-label';
-import DisabledLabel from './components/disabled-label/disabled-label';
+import StatusLabel, { Status } from './components/StatusLabel/index.ts';
 
 export default function Home() {
   return (
     <main>
-      <h1>Home Page</h1>
-      <ActiveLabel>Active</ActiveLabel>
-      <DisabledLabel>Not Active</DisabledLabel>
+      <h1 className="text-3xl font-bold mb-10">Home Page</h1>
+      <StatusLabel status={Status.Active} />
+      <StatusLabel status={Status.NotActive} />
+      <StatusLabel status={Status.Pending} />
+      <StatusLabel status={Status.Suspended} />
     </main>
   );
 }
