@@ -3,8 +3,10 @@ import StatusLabel, { Status } from './components/StatusLabel/index.ts';
 
 export default function Home() {
   return (
-    <main>
-      <h1 className="text-3xl font-bold mb-10">Home Page</h1>
+    <main
+    //  className="container mx-auto px-4"
+    >
+      {/* <h1 className="text-3xl font-bold mb-10">Home Page</h1>
       <div className="flex mb-8 space-x-4">
         <StatusLabel status={Status.Active} />
         <StatusLabel status={Status.NotActive} />
@@ -12,7 +14,7 @@ export default function Home() {
         <StatusLabel status={Status.Suspended} />
       </div>
 
-      <AddCompanyButton />
+      <AddCompanyButton /> */}
     </main>
   );
 }
