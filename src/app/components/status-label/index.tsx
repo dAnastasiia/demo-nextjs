@@ -1,11 +1,6 @@
 import clsx from 'clsx';
 
-export enum Status {
-  Active = 'Active',
-  NotActive = 'Not Active',
-  Pending = 'Pending',
-  Suspended = 'Suspended',
-}
+import { Status } from '@/enums';
 
 export interface StatusLabelProps {
   status: Status;
