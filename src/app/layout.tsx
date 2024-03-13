@@ -1,7 +1,10 @@
 import { ReactNode } from 'react';
-import './globals.css';
+import { Roboto_Mono } from 'next/font/google';
 
-import Header from './layouts/header';
+import './globals.css';
+import { Router } from 'next/router';
+
+const font = Roboto_Mono({ subsets: ['latin'] });
 
 export default function RootLayout({
   children,
@@ -10,10 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <Header />
-        {children}
-      </body>
+      <body className={font.className}>{children}</body>
     </html>
   );
 }
