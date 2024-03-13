@@ -13,8 +13,8 @@ export default function NotFound() {
           Page not found
         </p>
         <p className="text-base md:text-lg lg:text-xl text-gray-900">
-          Sorry, we couldn't find the page you're looking for. Perhaps you've
-          mistyped the URL? Be sure to check your spelling.
+          Sorry, we couldn&apos;t find the page you&apos;re looking for. Perhaps
+          you&apos;ve mistyped the URL? Be sure to check your spelling.
         </p>
 
         <button
