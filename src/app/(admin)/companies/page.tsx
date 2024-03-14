@@ -1,3 +1,5 @@
+import CompaniesTable from '@/components/companies/table';
+
 export default function Companies() {
-  return <div>Companies</div>;
+  return <CompaniesTable />;
 }
