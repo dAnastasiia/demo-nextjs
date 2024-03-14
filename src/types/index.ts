@@ -1,11 +1,11 @@
 import { Status } from '@/enums';
 
 export interface Company {
-  id: number;
-  category: string;
-  company: string;
+  id: string;
+  title: string;
   status: Status;
-  promotion: boolean;
+  joinedAt: string;
+  hasPromotions: boolean;
+  category: string;
   country: string;
-  joinedDate: string;
 }

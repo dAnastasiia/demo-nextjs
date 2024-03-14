@@ -1,6 +1,8 @@
-import { Status } from '@/enums';
-import { Company } from '@/types';
+'use client';
 
+import { useQuery } from '@tanstack/react-query';
+
+import { getCompanies } from '@/api/companies';
 import CompanyTableRow from './table-row';
 
 const headers = [
@@ -12,28 +14,13 @@ const headers = [
   'Joined date',
 ];
 
-const data: Company[] = [
-  {
-    id: 1,
-    category: 'Products',
-    company: 'Costco',
-    status: Status.Pending,
-    promotion: true,
-    country: 'USA',
-    joinedDate: '02.12.2023',
-  },
-  {
-    id: 2,
-    category: 'Retails',
-    company: 'NT Yui',
-    status: Status.Active,
-    promotion: false,
-    country: 'France',
-    joinedDate: '03.14.2018',
-  },
-];
-
 export default function CompaniesTable() {
+  const { data } = useQuery({
+    queryKey: ['companies'],
+    queryFn: () => getCompanies(),
+    staleTime: 10 * 1000,
+  });
+
   return (
     <table className="w-full border-separate border-spacing-y-2">
       <thead>
@@ -50,7 +37,7 @@ export default function CompaniesTable() {
       </thead>
 
       <tbody>
-        {data.map((company) => (
+        {data?.map((company) => (
           <CompanyTableRow key={company.id} {...company} />
         ))}
       </tbody>

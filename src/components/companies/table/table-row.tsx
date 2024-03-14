@@ -8,11 +8,11 @@ import { Company } from '@/types';
 export default function CompanyTableRow({
   id,
   category,
-  company,
+  title,
   status,
-  promotion,
+  hasPromotions,
   country,
-  joinedDate,
+  joinedAt,
 }: Company) {
   return (
     <tr className="h-14 text-center text-gray-900 bg-white">
@@ -21,7 +21,7 @@ export default function CompanyTableRow({
       </td>
 
       <td>
-        <a href={`/companies/${id}`}>{company}</a>
+        <a href={`/companies/${id}`}>{title}</a>
       </td>
 
       <td>
@@ -33,16 +33,16 @@ export default function CompanyTableRow({
           <Image
             width={16}
             height={16}
-            src={`/icons/${promotion ? 'check' : 'x-mark'}.svg`}
+            src={`/icons/${hasPromotions ? 'check' : 'x-mark'}.svg`}
             alt="promotion icon"
           />
           <span
             className={clsx(
               'text-sm font-medium',
-              promotion ? 'text-green-700' : 'text-red-700',
+              hasPromotions ? 'text-green-700' : 'text-red-700',
             )}
           >
-            {promotion ? 'Yes' : 'No'}
+            {hasPromotions ? 'Yes' : 'No'}
           </span>
         </div>
       </td>
@@ -50,7 +50,7 @@ export default function CompanyTableRow({
       <td>{country}</td>
 
       <td className="rounded-r">
-        {new Date(joinedDate).toLocaleDateString('uk-UA')}
+        {new Date(joinedAt).toLocaleDateString('uk-UA')}
       </td>
     </tr>
   );
