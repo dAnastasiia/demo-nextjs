@@ -10,7 +10,7 @@ export function DashboardItemWrapper({
   children,
 }: DashboardItemWrapperProps) {
   return (
-    <div className="space-y-8 border p-3 md:p-6 rounded-lg border-slate-800">
+    <div className="flex flex-col justify-between space-y-5 md:space-y-6 border p-3 md:p-6 rounded-xl border-slate-300 shadow-xl">
       <h5 className="font-semibold">{title}</h5>
 
       {children}
