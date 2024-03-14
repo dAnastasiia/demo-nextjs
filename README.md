@@ -1,6 +1,6 @@
 # Next.js + Tailwind CSS Admin Panel Demo
 
-![screenshot](./public/table.png)
+![screenshot](./public/dashboard.png)
 
 ## Overview
 
