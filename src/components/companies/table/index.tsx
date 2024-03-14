@@ -35,7 +35,7 @@ const data: Company[] = [
 
 export default function CompaniesTable() {
   return (
-    <table className="table-auto w-full border-separate border-spacing-y-2 overflow-x-scroll">
+    <table className="w-full border-separate border-spacing-y-2">
       <thead>
         <tr>
           {headers.map((header) => (
@@ -48,6 +48,7 @@ export default function CompaniesTable() {
           ))}
         </tr>
       </thead>
+
       <tbody>
         {data.map((company) => (
           <CompanyTableRow key={company.id} {...company} />
