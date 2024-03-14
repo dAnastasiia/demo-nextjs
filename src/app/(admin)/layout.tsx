@@ -2,8 +2,8 @@
 
 import { ReactNode, useState } from 'react';
 
-import Header from '@/layouts/header';
-import Sidebar from '@/layouts/sidebar';
+import Header from '@/components/layouts/header';
+import Sidebar from '@/components/layouts/sidebar';
 
 export default function AdminLayout({
   children,
