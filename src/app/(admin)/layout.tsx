@@ -2,8 +2,8 @@
 
 import { ReactNode, useState } from 'react';
 
-import Header from '@/layouts/header';
-import Sidebar from '@/layouts/sidebar';
+import Header from '@/components/layouts/header';
+import Sidebar from '@/components/layouts/sidebar';
 
 export default function AdminLayout({
   children,
@@ -22,7 +22,7 @@ export default function AdminLayout({
       <div className="flex flex-col flex-1 overflow-hidden">
         <Header toggleSidebar={toggleSidebar} />
 
-        <main className="flex-1 p-8 overflow-x-hidden overflow-y-auto bg-gray-100">
+        <main className="flex-1 p-4 md:p-8 overflow-x-hidden overflow-y-auto bg-gray-100">
           {children}
         </main>
       </div>

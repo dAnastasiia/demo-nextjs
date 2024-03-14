@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-import { Status } from '@/enums';
+import { Status } from '../../../enums';
 
 export interface StatusLabelProps {
   status: Status;

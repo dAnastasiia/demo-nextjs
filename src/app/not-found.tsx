@@ -1,7 +1,8 @@
 'use client';
 
-import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+
+import BackButton from '@/components/ui/back-button';
 
 export default function NotFound() {
   const router = useRouter();
@@ -17,20 +18,7 @@ export default function NotFound() {
           you&apos;ve mistyped the URL? Be sure to check your spelling.
         </p>
 
-        <button
-          className="flex items-center gap-2 p-6 mt-auto mx-auto"
-          onClick={() => router.back()}
-        >
-          <Image
-            width={18}
-            height={18}
-            src="/icons/arrow-left.svg"
-            alt="go back icon"
-          />
-          <span className="text-base md:text-lg lg:text-xl font-medium">
-            Go back
-          </span>
-        </button>
+        <BackButton text="Go back" onClick={() => router.back()} />
       </div>
     </main>
   );
