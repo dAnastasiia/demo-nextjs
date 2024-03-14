@@ -21,25 +21,27 @@ export default function CompaniesTable() {
   });
 
   return (
-    <table className="w-full border-separate border-spacing-y-2">
-      <thead>
-        <tr>
-          {headers.map((header) => (
-            <th
-              key={header}
-              className="pb-5 text-sm font-semibold text-gray-900"
-            >
-              {header}
-            </th>
-          ))}
-        </tr>
-      </thead>
+    <div className="overflow-x-auto">
+      <table className="w-full border-separate border-spacing-y-2">
+        <thead>
+          <tr>
+            {headers.map((header) => (
+              <th
+                key={header}
+                className="pb-5 text-sm font-semibold text-gray-900"
+              >
+                {header}
+              </th>
+            ))}
+          </tr>
+        </thead>
 
-      <tbody>
-        {data?.map((company) => (
-          <CompanyTableRow key={company.id} {...company} />
-        ))}
-      </tbody>
-    </table>
+        <tbody>
+          {data?.map((company) => (
+            <CompanyTableRow key={company.id} {...company} />
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
