@@ -1,3 +1,5 @@
+import { expect, describe, it } from 'vitest';
+
 import getInitials, {
   NAME_WORDS_LENGTH,
   DEFAULT_INITIALS,

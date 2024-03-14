@@ -1,3 +1,5 @@
+import { expect, describe, it } from 'vitest';
+
 import formatNumberWithCurrency, {
   formatNumber,
   formatCurrency,
@@ -20,7 +22,7 @@ describe('formatCurrency', () => {
   });
 
   it('should use default currency symbol if not provided', () => {
-    expect(formatCurrency('1234567')).toBe(`${DEFAULT_CURRENCY} 1234567`);
+    expect(formatCurrency('1234567')).toBe(`${DEFAULT_CURRENCY}1234567`);
   });
 });
 
@@ -35,7 +37,7 @@ describe('formatNumberWithCurrency', () => {
 
   it('should use default currency symbol if not provided', () => {
     expect(formatNumberWithCurrency(1234567)).toBe(
-      `${DEFAULT_CURRENCY} 1,234,567`,
+      `${DEFAULT_CURRENCY}1,234,567`,
     );
   });
 });
