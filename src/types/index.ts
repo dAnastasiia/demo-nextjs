@@ -9,3 +9,10 @@ export interface Company {
   category: string;
   country: string;
 }
+
+export interface Sales {
+  id: string;
+  name: string;
+  email: string;
+  value: string;
+}
