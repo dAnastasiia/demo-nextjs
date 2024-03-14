@@ -12,6 +12,7 @@ This demo showcases a slice of an admin panel built using Next.js combined with 
 - **Custom Label component**: Designed label setups.
 - **Table and Data Fetching**: Display datasets with ease.
 - **Navigation**: Smooth routing between simulated pages + responsive Header and Sidebar implementation.
+- **Unit Testing with Vitest**: Comprehensive unit testing setup for ensuring code quality and reliability.
 
 ## Technologies
 
@@ -19,3 +20,4 @@ This demo showcases a slice of an admin panel built using Next.js combined with 
 - **Tailwind CSS**: A utility-first CSS framework for quickly building custom designs without having to leave your HTML.
 - **TanStack Query**: A data-fetching library for React that provides a powerful and flexible API for querying and mutating data from your server, with built-in caching and automatic refetching.
 - **Shadcn UI**: A collection of re-usable components for faster development.
+- **Vitest**: A unit testing library for JavaScript and TypeScript projects, providing a simple and intuitive interface for writing and running tests.
