@@ -18,7 +18,6 @@ export default function CompaniesTable() {
   const { data } = useQuery({
     queryKey: ['companies'],
     queryFn: () => getCompanies(),
-    staleTime: 10 * 1000,
   });
 
   return (
