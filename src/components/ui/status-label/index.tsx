@@ -14,7 +14,7 @@ export default function StatusLabel({
   return (
     <div
       className={clsx(
-        'inline-flex items-center py-1 px-3.5 rounded-3xl text-sm font-medium',
+        'text-xs md:text-sm inline-flex items-center py-1 px-3.5 rounded-3xl text-sm font-medium',
         status === Status.Active && 'text-green-700 bg-green-100',
         status === Status.NotActive && 'text-red-700 bg-red-100',
         status === Status.Pending && 'text-orange-700 bg-orange-100',
