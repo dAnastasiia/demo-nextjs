@@ -3,6 +3,8 @@
 import { useQuery } from '@tanstack/react-query';
 
 import { getSales } from '@/api/dashboard';
+
+import { DashboardItemWrapper } from '../dashbord-item-wrapper';
 import { SalesItem } from './item';
 
 export function Sales() {
@@ -12,10 +14,8 @@ export function Sales() {
   });
 
   return (
-    <div className="space-y-8 border p-6 rounded-lg border-slate-500">
-      <h5 className="font-semibold">Top Sales</h5>
-
+    <DashboardItemWrapper title="Top Sales">
       {data?.map((data) => <SalesItem key={data.id} {...data} />)}
-    </div>
+    </DashboardItemWrapper>
   );
 }

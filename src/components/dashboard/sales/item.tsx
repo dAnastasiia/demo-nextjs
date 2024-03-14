@@ -5,7 +5,7 @@ import { Sales } from '@/types';
 export function SalesItem({ name, email, value }: Sales) {
   return (
     <div className="flex items-center">
-      <Avatar className="flex h-9 w-9 items-center justify-center space-y-0 border bg-red-900 text-white">
+      <Avatar className="flex h-9 w-9 items-center justify-center space-y-0 border bg-slate-700 text-white">
         {getInitials(name)}
       </Avatar>
 
