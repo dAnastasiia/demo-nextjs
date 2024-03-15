@@ -17,10 +17,8 @@ export default function Sidebar({ isVisible, onClose }: SidebarProps) {
   return (
     <aside
       className={clsx(
-        'top-0 left-0 z-40 w-80 h-screen hidden lg:block transition-all duration-1000 ease-in-out',
-        {
-          ['sm:block']: !isVisible,
-        },
+        'top-0 left-0 z-40 w-80 h-screen lg:block transition-all duration-1000 ease-in-out',
+        isVisible ? 'hidden' : 'block',
       )}
     >
       <button
