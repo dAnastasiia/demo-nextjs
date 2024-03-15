@@ -4,7 +4,7 @@
 
 ## Overview
 
-This demo showcases a slice of an admin panel built using Next.js combined with the utility-first CSS framework Tailwind CSS and a collection of collection of re-usable components Shadcn UI. It includes a sidebar for navigation, routes to two main pages, and integrated chart and table components for data visualization and management.
+[This demo](https://demo-nextjs-hazel.vercel.app/) showcases a slice of an admin panel built using Next.js combined with the utility-first CSS framework Tailwind CSS and a collection of collection of re-usable components Shadcn UI. It includes a sidebar for navigation, routes to two main pages, and integrated chart and table components for data visualization and management.
 
 ## Features
 
