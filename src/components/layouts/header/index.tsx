@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 
 interface HeaderProps {
@@ -8,7 +6,7 @@ interface HeaderProps {
 
 export default function Header({ toggleSidebar }: HeaderProps) {
   return (
-    <header className="flex items-center justify-between lg:justify-end px-8 py-4 border-b border-gray-300">
+    <header className="fixed h-20 top-0 left-0 lg:left-80 right-0 z-40 bg-white border-b border-gray-300 px-8 py-4 flex items-center justify-between lg:justify-end">
       <button className="cursor-pointer lg:hidden" onClick={toggleSidebar}>
         <Image width={18} height={18} src="/icons/menu.svg" alt="menu icon" />
       </button>

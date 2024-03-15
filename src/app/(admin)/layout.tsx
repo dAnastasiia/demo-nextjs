@@ -1,31 +1,26 @@
 'use client';
 
-import { ReactNode, useState } from 'react';
+import { PropsWithChildren, useState } from 'react';
 
 import Header from '@/components/layouts/header';
 import Sidebar from '@/components/layouts/sidebar';
+import Main from '@/components/layouts/main';
 
-export default function AdminLayout({
-  children,
-}: Readonly<{
-  children: ReactNode;
-}>) {
+export default function AdminLayout({ children }: PropsWithChildren) {
   const [isSidebarVisible, setSidebarVisibility] = useState(true);
   const toggleSidebar = () => {
     setSidebarVisibility(!isSidebarVisible);
   };
 
   return (
-    <main className="flex min-h-screen">
+    <div className="min-h-screen flex">
       <Sidebar isVisible={isSidebarVisible} onClose={toggleSidebar} />
 
-      <div className="flex flex-col flex-1 overflow-hidden">
+      <div className="flex flex-col flex-1 w-full">
         <Header toggleSidebar={toggleSidebar} />
 
-        <main className="flex-1 p-4 md:p-8 overflow-x-hidden overflow-y-auto bg-gray-100">
-          {children}
-        </main>
+        <Main>{children}</Main>
       </div>
-    </main>
+    </div>
   );
 }
