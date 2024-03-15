@@ -21,3 +21,7 @@
 - **TanStack Query**: A data-fetching library for React that provides a powerful and flexible API for querying and mutating data from your server, with built-in caching and automatic refetching.
 - **Shadcn UI**: A collection of re-usable components for faster development.
 - **Vitest**: A unit testing library for JavaScript and TypeScript projects, providing a simple and intuitive interface for writing and running tests.
+
+## Deployment
+
+The app was deployed to [Vercel](https://vercel.com/) for hosting. Environment variables were used for configuring sensitive information such as API keys or database connection strings.
