@@ -16,19 +16,19 @@ export default function CompanyTableRow({
 }: Company) {
   return (
     <tr className="h-14 text-center text-gray-900 bg-white">
-      <td className="text-xs font-medium text-blue-700 rounded-l border-l-4 border-blue-700">
+      <td className="text-xs md:text-sm font-medium text-blue-700 rounded-l border-l-4 border-blue-700 px-2 md:px-4">
         {category}
       </td>
 
-      <td>
+      <td className="text-xs md:text-sm px-2 md:px-4">
         <a href={`/companies/${id}`}>{title}</a>
       </td>
 
-      <td>
+      <td className="text-xs md:text-sm px-2 md:px-4">
         <StatusLabel status={status} />
       </td>
 
-      <td>
+      <td className="text-xs md:text-sm px-2 md:px-4">
         <div className="inline-flex items-center gap-1">
           <Image
             width={16}
@@ -38,7 +38,7 @@ export default function CompanyTableRow({
           />
           <span
             className={clsx(
-              'text-sm font-medium',
+              'font-medium',
               hasPromotions ? 'text-green-700' : 'text-red-700',
             )}
           >
@@ -47,9 +47,9 @@ export default function CompanyTableRow({
         </div>
       </td>
 
-      <td>{country}</td>
+      <td className="text-xs md:text-sm px-2 md:px-4">{country}</td>
 
-      <td className="rounded-r">
+      <td className="text-xs md:text-sm px-2 md:px-4 rounded-r">
         {new Date(joinedAt).toLocaleDateString('uk-UA')}
       </td>
     </tr>
