@@ -3,7 +3,6 @@
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 
-import { SIDEBAR_WIDTH } from '../constants';
 import SidebarItem from './sidebar-item';
 
 interface SidebarProps {
@@ -18,7 +17,7 @@ export default function Sidebar({ isVisible, onClose }: SidebarProps) {
   return (
     <aside
       className={clsx(
-        `fixed top-0 left-0 z-50 h-full w-${SIDEBAR_WIDTH} lg:block transition-all duration-1000 ease-in-out bg-gray-900`,
+        'fixed top-0 left-0 z-50 h-full w-80 lg:block transition-all duration-1000 ease-in-out bg-gray-900',
         isVisible ? 'hidden' : 'block',
       )}
     >
